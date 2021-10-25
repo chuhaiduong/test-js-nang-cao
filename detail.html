@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="detail"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    
+    <script>
+        var url = window.location.search;
+        const urlParams = new URLSearchParams(url);
+        const id = urlParams.get('id');
+        const detail = document.querySelector('#detail')
+
+        axios.get('http://localhost:3000/post/' +id)
+        .then(response =>{
+            detail.innerHTML = /*html*/`
+            <div>
+                <img src="${response.data.image}"/>
+                <h2>${response.data.title}</h2>
+                <h2>${response.data.price}</h2>
+                <h2>${response.data.desc}</h2>
+                <h2>${response.data.author}</h2>
+            </div>
+            `
+        })
+    </script>
+    
+</body>
+</html>

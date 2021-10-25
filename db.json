@@ -1,0 +1,25 @@
+{
+  "post": [
+    {
+      "id": "1",
+      "title": "san pham hay vl",
+      "price": "1000",
+      "desc": "good",
+      "author": "very"
+    },
+    {
+      "id": "1",
+      "title": "san pham 1",
+      "price": "1000",
+      "desc": "good",
+      "author": "very"
+    },
+    {
+      "id": "30303442244324441443",
+      "title": "san pham 3",
+      "price": "32432",
+      "desc": "cuc dep",
+      "author": "sieu pham"
+    }
+  ]
+}
